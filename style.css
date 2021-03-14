@@ -1,0 +1,344 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-image: url(https://tse1.mm.bing.net/th?id=OIP.LJFkU3fJQJR6bjJB3o21XwHaDM&pid=Api&P=0&w=399&h=173);
+    background-position: 100%;
+    background-size: 100%;
+    overflow: hidden;
+}
+
+section .navBar{
+    width: 100vw;
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+section .navBar .logo{
+    /* width: 40%; */
+    font-size: 3.7rem;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    position: absolute;
+    left: 12rem;
+}
+
+section .navBar nav{
+    font-family: ProductSans;
+    font-size: 1.7rem;
+    position: absolute;
+    right: 12rem;
+}
+
+section .navBar nav a{
+    color: white;
+    margin: 0 2rem;
+    text-decoration: none;
+    padding: 0.8rem;
+    transition: .1s all linear;
+}
+
+section .navBar nav a:hover{
+    border-bottom: 0.2rem solid white;
+}
+
+.main{
+    position: relative;
+}
+
+.main img{
+    /* display: inline-block; */
+    width: 38rem;
+    position: absolute;
+    top: 2rem;
+    right: 12rem;
+    filter: drop-shadow(.1rem .1rem 1rem black);
+}
+
+.main .texts{
+    font-family: ProductSans;
+    position: absolute;
+    top: 13.7rem;
+    left: 5.5rem;
+    color: white;
+}
+
+.main .texts p{
+    font-size: 2rem;
+}
+
+.main .texts h1{
+    font-size: 6.8rem;
+    color: black;
+}
+
+section .note{
+    font-family: ProductSans;
+    font-size: 2.6rem;
+    color: black;
+    visibility: hidden;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+
+/* BACKGROUND START */
+section .wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    background: url(assets/wave.png);
+    background-size: 100rem 10rem;
+}
+
+section .wave.wave1{
+    animation: animate 5s linear infinite;
+    animation-delay: -5s;
+    z-index: 999;
+    opacity: 1;
+}
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
+
+section .wave.wave2{
+    animation: animate2 12s linear infinite;
+    animation-delay: -5s;
+    z-index: 998;
+    opacity: 0.5;
+    bottom: 1rem;
+}
+@keyframes animate2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -100rem;
+    }
+}
+
+section .wave.wave3{
+    animation: animate 12s linear infinite;
+    animation-delay: -2s;
+    z-index: 997;
+    opacity: 0.2;
+    bottom: 1.5rem;
+}
+
+section .wave.wave4{
+    animation: animate 12s linear infinite;
+    animation-delay: -2s;
+    z-index: 996;
+    opacity: 0.6;
+    bottom: 2rem;
+}
+/* BACKGROUND END  */
+
+
+/* RESPONSIVE CODE  */
+@media screen and (max-width: 1142px) {
+    .main img{
+        width: 35rem;
+    }
+    .main .texts h1{
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .main img{
+        width: 33rem;
+        right: 10rem;
+    }
+    .main .texts h1{
+        font-size: 5.5rem;
+    }
+    .main .texts p{
+        font-size: 1.8rem;
+    }
+    section .navBar .logo{
+        font-size: 3.4rem;
+        left: 10rem;
+    }
+    section .navBar nav{
+        font-size: 1.6rem;
+        right: 10rem;
+    }
+}
+
+@media screen and (max-width: 944px) {
+    .main img{
+        width: 31rem;
+        right: 8rem;
+    }
+    .main .texts h1{
+        font-size: 5.1rem;
+    }
+    .main .texts p{
+        font-size: 1.8rem;
+    }
+    section .navBar .logo{
+        font-size: 3.2rem;
+        left: 7rem;
+    }
+    section .navBar nav{
+        font-size: 1.6rem;
+        right: 7rem;
+    }
+    .main .texts{
+        left: 5rem;
+    }
+}
+
+@media screen and (max-width: 872px) {
+    .main img{
+        /* width: 31rem; */
+        right: 6rem;
+    }
+    .main .texts h1{
+        font-size: 5rem;
+    }
+    .main .texts{
+        left: 3.5rem;
+    }
+    section .navBar .logo{
+        font-size: 3rem;
+        left: 6.5rem;
+    }
+    section .navBar nav{
+        font-size: 1.5rem;
+        right: 5rem;
+    }
+}
+
+@media screen and (max-width: 826px) {
+    .main .texts h1{
+        font-size: 4.7rem;
+    }
+    .main .texts{
+        left: 2.5rem;
+    }
+    .main img{
+        /* width: 31rem; */
+        right: 4rem;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .main .texts h1{
+        font-size: 4.2rem;
+    }
+    .main .texts{
+        left: 2.2rem;
+    }
+    .main img{
+        width: 28rem;
+        right: 3.6rem;
+    }
+    section .navBar .logo{
+        font-size: 2.8rem;
+        left: 4.6rem;
+    }
+    section .navBar nav{
+        font-size: 1.5rem;
+        right: 3.2rem;
+    }
+    section .navBar nav a{
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 698px) {
+    section .navBar .logo{
+        font-size: 2.8rem;
+        left: 4rem;
+    }
+    section .navBar nav a{
+        margin: 0 0.7rem;
+    }
+    section .navBar nav{
+        font-size: 1.5rem;
+        right: 2.8rem;
+    }
+    .main .texts h1{
+        font-size: 4rem;
+    }
+    .main img{
+        right: 2rem;
+    }
+}
+
+@media screen and (max-width: 698px) {
+    .main img{
+        visibility: hidden;
+    }
+    .main .texts{
+        text-align: center;
+        left: 50%;
+        top: 6.7rem;
+        transform: translateX(-50%);
+    }
+    .main .texts h1{
+        font-size: 7rem;
+    }
+    section .navBar .logo{
+        font-size: 2.5rem;
+        left: 3.3rem;
+    }
+    section .navBar nav{
+        font-size: 1.5rem;
+        right: 1.5rem;
+    }
+    section .navBar nav a{
+        margin: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 562px) {
+    .main img{
+        visibility: hidden;
+    }
+    .main .texts{
+        text-align: center;
+        left: 50%;
+        top: 6.7rem;
+        transform: translateX(-50%);
+    }
+    .main .texts h1{
+        font-size: 6rem;
+    }
+    section .navBar .logo{
+        font-size: 2.5rem;
+        left: 3.3rem;
+    }
+    section .navBar nav{
+        font-size: 1.5rem;
+        right: 1.5rem;
+    }
+    section .navBar nav a{
+        margin: 0 0.5rem;
+    }
+}
+
+ /* BETTER TO VIEW THIS SITE WITH A SCREEN LARGER THAT 561px */
